@@ -1,66 +1,53 @@
+# E-Commerce ETL Pipeline
 
-# E-Commerce ETL Pipeline (Python)
+A production-ready ETL pipeline built using Python, PostgreSQL, Docker, and GitHub Actions.
 
-## Project Overview
-This project demonstrates an end-to-end ETL (Extract, Transform, Load) pipeline for e-commerce analytics.
+## Features
 
-### Features
 - Extract product, customer, and transaction data
-- Transform and clean raw datasets
-- Load cleaned data into PostgreSQL
-- Logging and modular architecture
-- Ready for scheduling with Airflow or Cron
-
----
+- Transform raw datasets into analytics-ready format
+- Load processed data into PostgreSQL
+- Dockerized architecture
+- Automated CI/CD pipeline using GitHub Actions
+- Modular and scalable ETL structure
 
 ## Tech Stack
+
 - Python
 - Pandas
-- SQLAlchemy
 - PostgreSQL
-- Faker
-- Logging
-
----
+- SQLAlchemy
+- Docker
+- GitHub Actions
 
 ## Project Structure
 
-ecommerce_etl_pipeline/
-│
-├── data/
-│   ├── raw/
-│   └── processed/
+```bash
+ecommerce-etl-pipeline/
 │
 ├── extract/
-│   └── extract_data.py
-│
 ├── transform/
-│   └── transform_data.py
-│
 ├── load/
-│   └── load_data.py
-│
 ├── config/
-│   └── config.py
-│
-├── logs/
-│
+├── tests/
+├── .github/workflows/
+├── Dockerfile
 ├── main.py
 ├── requirements.txt
-└── schema.sql
+└── README.md
+```
 
----
+## CI/CD Workflow
 
-## Run Pipeline
+- Automatically triggers on every push
+- Installs dependencies
+- Runs workflow validation
+- Builds Docker image
 
-### Install dependencies
-pip install -r requirements.txt
+## Future Improvements
 
-### Create PostgreSQL database
-CREATE DATABASE ecommerce_db;
-
-### Run schema
-Execute schema.sql in PostgreSQL.
-
-### Run ETL
-python main.py
+- Apache Airflow orchestration
+- AWS deployment
+- Real API integration
+- Power BI dashboard
+- Data quality monitoring
